@@ -77,7 +77,14 @@ export default function AcceptedJobs() {
 
   if (loading) {
     return (
-      <Box mt={10} textAlign="center">
+      <Box
+        mt={10}
+        textAlign="center"
+        sx={{
+          background:
+            "linear-gradient(to right, rgba(6, 22, 40, 0.7), rgba(59, 90, 112, 0.7))",
+        }}
+      >
         <CircularProgress />
       </Box>
     );

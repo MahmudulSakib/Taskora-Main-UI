@@ -72,7 +72,15 @@ export default function ClientQuizPage() {
 
   if (!quiz)
     return (
-      <Typography textAlign="center" mt={10} color="white">
+      <Typography
+        textAlign="center"
+        mt={10}
+        color="white"
+        sx={{
+          background:
+            "linear-gradient(to right, rgba(6, 22, 40, 0.7), rgba(59, 90, 112, 0.7))",
+        }}
+      >
         No quiz available today
       </Typography>
     );
