@@ -1,0 +1,25 @@
+/* swiper-custom.css */
+
+/* Change navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important; /* 💠 Replace with your desired color */
+  font-weight: bold;
+}
+
+/* Optional: Add hover effect */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: white !important;
+}
+
+/* Change pagination bullet (circle) color */
+.swiper-pagination-bullet {
+  background: white; /* inactive bullet */
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  background: white !important; /* active bullet */
+  opacity: 1;
+}
