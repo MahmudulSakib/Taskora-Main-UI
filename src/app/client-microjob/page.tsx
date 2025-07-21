@@ -81,6 +81,7 @@ export default function AcceptedJobs() {
         mt={10}
         textAlign="center"
         sx={{
+          minHeight: "100vh",
           background:
             "linear-gradient(to right, rgba(6, 22, 40, 0.7), rgba(59, 90, 112, 0.7))",
         }}
