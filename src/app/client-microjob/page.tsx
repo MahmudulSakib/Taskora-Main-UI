@@ -78,6 +78,7 @@ export default function AcceptedJobs() {
   if (loading) {
     return (
       <Box
+        minHeight="100vh"
         mt={10}
         textAlign="center"
         sx={{
