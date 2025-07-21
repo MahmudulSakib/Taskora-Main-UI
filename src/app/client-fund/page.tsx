@@ -32,7 +32,7 @@ export default function UserFund() {
     const fetchUserFund = async () => {
       try {
         const res = await axios.get<UserFundResponse>(
-          "http://localhost:5000/client/fund",
+          "https://taskora-main-backend.onrender.com/client/fund",
           { withCredentials: true }
         );
         setBalance(res.data.balance);

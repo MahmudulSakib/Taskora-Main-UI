@@ -55,7 +55,7 @@ export default function AcceptedJobs() {
     const fetchJobs = async () => {
       try {
         const res = await axios.get<any>(
-          "http://localhost:5000/api/accepted-jobs",
+          "https://taskora-main-backend.onrender.com/api/accepted-jobs",
           {
             withCredentials: true,
           }

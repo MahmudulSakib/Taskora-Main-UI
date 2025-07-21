@@ -36,7 +36,7 @@ export default function ClientQuizPage() {
 
   useEffect(() => {
     axios
-      .get<any>("http://localhost:5000/client/quiz-today", {
+      .get<any>("https://taskora-main-backend.onrender.com/client/quiz-today", {
         withCredentials: true,
       })
       .then((res) => {
@@ -55,7 +55,7 @@ export default function ClientQuizPage() {
   const handleSubmit = async () => {
     try {
       await axios.post(
-        "http://localhost:5000/client/submit-quiz",
+        "https://taskora-main-backend.onrender.com/client/submit-quiz",
         {
           quizId: quiz.id,
           selectedAnswer: answer,

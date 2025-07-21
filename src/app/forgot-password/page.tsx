@@ -27,7 +27,7 @@ export default function ForgotPasswordPage() {
 
     try {
       const res = await axios.post<ForgotPasswordResponse>(
-        "http://localhost:5000/client/forgot-password",
+        "https://taskora-main-backend.onrender.com/client/forgot-password",
         { email }
       );
       setMessage(res.data.message);

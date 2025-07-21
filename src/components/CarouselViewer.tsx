@@ -16,7 +16,7 @@ export default function CarouselSection() {
   useEffect(() => {
     const fetchImages = async () => {
       const res = await axios.get<any>(
-        "http://localhost:5000/client/carousel-images"
+        "https://taskora-main-backend.onrender.com/client/carousel-images"
       );
       setImages(res.data.map((img: any) => img.url));
     };

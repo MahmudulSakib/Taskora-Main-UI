@@ -55,7 +55,7 @@ export default function UserBonusWallet() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/client/bonus-wallet", {
+      .get("https://taskora-main-backend.onrender.com/client/bonus-wallet", {
         withCredentials: true,
       })
       .then((res) => setWallet(res.data))
@@ -88,7 +88,7 @@ export default function UserBonusWallet() {
 
     try {
       await axios.post(
-        "http://localhost:5000/client/request-bonus-withdraw",
+        "https://taskora-main-backend.onrender.com/client/request-bonus-withdraw",
         postData,
         { withCredentials: true }
       );

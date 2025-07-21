@@ -49,7 +49,7 @@ export default function DriveOffersPage() {
     try {
       setLoading(true);
       const res = await axios.get<{ offers: Offer[]; total: number }>(
-        "http://localhost:5000/client/drive-offers",
+        "https://taskora-main-backend.onrender.com/client/drive-offers",
         {
           params: { limit: PAGE_LIMIT, offset: pg * PAGE_LIMIT },
           withCredentials: true,

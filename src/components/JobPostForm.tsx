@@ -48,7 +48,7 @@ export default function JobPostForm({
     const fetchWallet = async () => {
       try {
         const res = await axios.get<{ balance: number }>(
-          "http://localhost:5000/client/fund",
+          "https://taskora-main-backend.onrender.com/client/fund",
           {
             withCredentials: true,
           }
@@ -87,7 +87,7 @@ export default function JobPostForm({
       formData.append("image", image);
 
       const res = await axios.post<any>(
-        "http://localhost:5000/client/job-post",
+        "https://taskora-main-backend.onrender.com/client/job-post",
         formData,
         {
           withCredentials: true,

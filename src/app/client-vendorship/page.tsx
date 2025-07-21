@@ -43,9 +43,13 @@ export default function VendorShipForm() {
     setMessage("");
 
     try {
-      await axios.post("http://localhost:5000/client/vendor-ship", form, {
-        withCredentials: true,
-      });
+      await axios.post(
+        "https://taskora-main-backend.onrender.com/client/vendor-ship",
+        form,
+        {
+          withCredentials: true,
+        }
+      );
       setMessage(
         "Thank you for applying, Our team will contact with you shortly."
       );

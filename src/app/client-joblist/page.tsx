@@ -25,9 +25,12 @@ export default function JobPostList() {
   const fetchMyJobs = async () => {
     try {
       setLoadingJobs(true);
-      const res = await axios.get<any>("http://localhost:5000/client/my-jobs", {
-        withCredentials: true,
-      });
+      const res = await axios.get<any>(
+        "https://taskora-main-backend.onrender.com/client/my-jobs",
+        {
+          withCredentials: true,
+        }
+      );
       setMyJobs(res.data || []);
     } catch (err) {
       console.log("Unauthorized");

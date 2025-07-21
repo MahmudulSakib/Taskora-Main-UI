@@ -61,7 +61,7 @@ export default function ProfilePage() {
       if (!user) return;
       try {
         const res = await axios.get<UserProfileResponse>(
-          "http://localhost:5000/client/profile",
+          "https://taskora-main-backend.onrender.com/client/profile",
           { withCredentials: true }
         );
         const u = res.data.user;
@@ -108,7 +108,7 @@ export default function ProfilePage() {
 
     try {
       const res = await axios.post<UpdateProfileResponse>(
-        "http://localhost:5000/client/update-profile",
+        "https://taskora-main-backend.onrender.com/client/update-profile",
         data,
         { withCredentials: true }
       );

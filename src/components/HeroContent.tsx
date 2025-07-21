@@ -8,7 +8,7 @@ import axios from "axios";
 const handleAdClick = async (url: string) => {
   try {
     await axios.post(
-      "http://localhost:5000/api/bonus/ad-click",
+      "https://taskora-main-backend.onrender.com/api/bonus/ad-click",
       {},
       {
         withCredentials: true,

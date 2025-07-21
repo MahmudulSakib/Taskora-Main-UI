@@ -48,7 +48,7 @@ export default function RechargeForm() {
     const fetchWallet = async () => {
       try {
         const res = await axios.get<WalletResponse>(
-          "http://localhost:5000/client/fund",
+          "https://taskora-main-backend.onrender.com/client/fund",
           { withCredentials: true }
         );
         setWalletBalance(res.data.balance || 0);
@@ -79,7 +79,7 @@ export default function RechargeForm() {
 
     try {
       await axios.post(
-        "http://localhost:5000/client/recharge",
+        "https://taskora-main-backend.onrender.com/client/recharge",
         { mobileNumber, amount: rechargeAmount, operator, simType, password },
         { withCredentials: true }
       );

@@ -58,7 +58,7 @@ export default function JobDetailsPage() {
     const fetchJob = async () => {
       try {
         const res = await axios.get<any>(
-          `http://localhost:5000/api/accepted-jobs/${id}`,
+          `https://taskora-main-backend.onrender.com/api/accepted-jobs/${id}`,
           { withCredentials: true }
         );
         setJob(res.data);
@@ -72,7 +72,7 @@ export default function JobDetailsPage() {
     const checkSubmission = async () => {
       try {
         const res = await axios.get<any>(
-          `http://localhost:5000/api/jobs/${id}/check-submission`,
+          `https://taskora-main-backend.onrender.com/api/jobs/${id}/check-submission`,
           { withCredentials: true }
         );
         setAlreadySubmitted(res.data.submitted);
@@ -113,7 +113,7 @@ export default function JobDetailsPage() {
 
     try {
       const res = await axios.post(
-        `http://localhost:5000/api/jobs/${id}/submit-proof`,
+        `https://taskora-main-backend.onrender.com/api/jobs/${id}/submit-proof`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },

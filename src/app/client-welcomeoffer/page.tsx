@@ -30,7 +30,7 @@ export default function WelcomeOffer() {
     const fetchStatus = async () => {
       try {
         const res = await axios.get<any>(
-          "http://localhost:5000/client/welcome-offer-status",
+          "https://taskora-main-backend.onrender.com/client/welcome-offer-status",
           {
             withCredentials: true,
           }
@@ -49,7 +49,7 @@ export default function WelcomeOffer() {
   const handleClaim = async () => {
     try {
       await axios.post(
-        "http://localhost:5000/client/claim-welcome-offer",
+        "https://taskora-main-backend.onrender.com/client/claim-welcome-offer",
         {},
         { withCredentials: true }
       );

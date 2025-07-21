@@ -66,7 +66,7 @@ export default function SignUpPage() {
     try {
       setLoading(true);
       const res = await axios.post<SignUpResponse>(
-        "http://localhost:5000/client/sign-up",
+        "https://taskora-main-backend.onrender.com/client/sign-up",
         formData
       );
 

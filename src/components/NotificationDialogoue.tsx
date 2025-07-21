@@ -42,9 +42,12 @@ export default function NotificationDialog() {
 
   useEffect(() => {
     axios
-      .get<any>("http://localhost:5000/client/notifications", {
-        withCredentials: true,
-      })
+      .get<any>(
+        "https://taskora-main-backend.onrender.com/client/notifications",
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => setNotifications(res.data))
       .catch(() => setNotifications([]));
   }, []);

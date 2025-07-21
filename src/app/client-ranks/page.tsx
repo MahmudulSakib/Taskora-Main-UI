@@ -41,7 +41,7 @@ export default function UserRankList() {
 
   useEffect(() => {
     axios
-      .get<any>("http://localhost:5000/client/user-ranks", {
+      .get<any>("https://taskora-main-backend.onrender.com/client/user-ranks", {
         withCredentials: true,
       })
       .then((res) => setUsers(res.data))

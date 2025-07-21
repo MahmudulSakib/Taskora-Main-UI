@@ -19,7 +19,7 @@ export default function AdsRedirectPage() {
     const clickAndRedirect = async () => {
       try {
         await axios.post(
-          "http://localhost:5000/api/bonus/ad-click",
+          "https://taskora-main-backend.onrender.com/api/bonus/ad-click",
           {},
           { withCredentials: true }
         );

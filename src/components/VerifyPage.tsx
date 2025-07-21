@@ -21,7 +21,7 @@ export default function VerifyPage() {
     const verifyAccount = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/client/verify?token=${token}`
+          `https://taskora-main-backend.onrender.com/client/verify?token=${token}`
         );
         if (res.status === 200) {
           setStatus("success");

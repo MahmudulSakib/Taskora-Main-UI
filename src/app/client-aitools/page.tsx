@@ -67,9 +67,12 @@ export default function UserAiSubscriptionPlans() {
     setPassword("");
 
     try {
-      const res = await axios.get<any>("http://localhost:5000/client/fund", {
-        withCredentials: true,
-      });
+      const res = await axios.get<any>(
+        "https://taskora-main-backend.onrender.com/client/fund",
+        {
+          withCredentials: true,
+        }
+      );
       setWalletAmount(Number(res.data.balance));
     } catch (err) {
       setWalletAmount(null);
@@ -92,7 +95,7 @@ export default function UserAiSubscriptionPlans() {
     try {
       setSubmitting(true);
       const res = await axios.post<any>(
-        "http://localhost:5000/client/buy-ai-subscription",
+        "https://taskora-main-backend.onrender.com/client/buy-ai-subscription",
         {
           planId: selectedPlan.id,
           email,
@@ -123,7 +126,7 @@ export default function UserAiSubscriptionPlans() {
   useEffect(() => {
     const fetchPlans = async () => {
       const res = await axios.get<any>(
-        "http://localhost:5000/client/available-ai-subscriptions",
+        "https://taskora-main-backend.onrender.com/client/available-ai-subscriptions",
         {
           withCredentials: true,
         }

@@ -39,7 +39,7 @@ export default function ResetPasswordPage() {
 
     try {
       const res = await axios.post<ResetPasswordResponse>(
-        "http://localhost:5000/client/reset-password",
+        "https://taskora-main-backend.onrender.com/client/reset-password",
         {
           token,
           newPassword: password,

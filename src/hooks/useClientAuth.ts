@@ -22,7 +22,7 @@ export default function useClientAuth() {
   const checkAuth = async () => {
     try {
       const res = await axios.get<UserProfileResponse>(
-        "http://localhost:5000/client/profile",
+        "https://taskora-main-backend.onrender.com/client/profile",
         {
           withCredentials: true,
         }
@@ -38,7 +38,7 @@ export default function useClientAuth() {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:5000/client/log-out",
+        "https://taskora-main-backend.onrender.com/client/log-out",
         {},
         { withCredentials: true }
       );
