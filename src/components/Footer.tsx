@@ -26,7 +26,7 @@ export default function Footer() {
         </div>
 
         <div className="text-xs opacity-70">
-          &copy; {new Date().getFullYear()} Life Good. All rights reserved.
+          &copy; {new Date().getFullYear()} Taskora. All rights reserved.
         </div>
       </div>
     </footer>
