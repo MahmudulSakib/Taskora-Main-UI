@@ -76,7 +76,8 @@ export default function UnifiedTimeline() {
         minHeight="90vh"
         py={6}
         sx={{
-          background: "linear-gradient(to right, #09203F, #537895)",
+          background:
+            "linear-gradient(to right, rgba(6, 22, 40, 0.7), rgba(59, 90, 112, 0.7))",
           color: "white",
         }}
       >

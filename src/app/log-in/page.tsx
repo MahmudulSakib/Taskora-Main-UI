@@ -67,7 +67,8 @@ export default function LoginPage() {
       alignItems="center"
       justifyContent="center"
       sx={{
-        background: "linear-gradient(to right, #09203F, #537895)",
+        background:
+          "linear-gradient(to right, rgba(6, 22, 40, 0.7), rgba(59, 90, 112, 0.7))",
         position: "relative",
         px: 2,
       }}
@@ -192,7 +193,7 @@ export default function LoginPage() {
         width="100%"
         sx={{ color: "#fff", fontSize: 12 }}
       >
-        © 2025 Life Good
+        © 2025 Taskora
       </Box>
     </Box>
   );

@@ -148,7 +148,10 @@ export default function ProfilePage() {
         display="flex"
         alignItems="center"
         justifyContent="center"
-        sx={{ background: "linear-gradient(to right, #09203F, #537895)" }}
+        sx={{
+          background:
+            "linear-gradient(to right, rgba(6, 22, 40, 0.7), rgba(59, 90, 112, 0.7))",
+        }}
       >
         <CircularProgress sx={{ color: "#F5A742" }} />
       </Box>
@@ -170,7 +173,8 @@ export default function ProfilePage() {
         alignItems="center"
         justifyContent="center"
         sx={{
-          background: "linear-gradient(to right, #09203F, #537895)",
+          background:
+            "linear-gradient(to right, rgba(6, 22, 40, 0.7), rgba(59, 90, 112, 0.7))",
           px: 2,
         }}
       >

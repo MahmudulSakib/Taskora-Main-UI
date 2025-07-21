@@ -83,7 +83,10 @@ export default function DriveOffersPage() {
         justifyContent="center"
         alignItems="center"
         height="100vh"
-        sx={{ background: "linear-gradient(to right, #09203F, #537895)" }}
+        sx={{
+          background:
+            "linear-gradient(to right, rgba(6, 22, 40, 0.7), rgba(59, 90, 112, 0.7))",
+        }}
       >
         <CircularProgress sx={{ color: "white" }} />
       </Box>
@@ -98,7 +101,8 @@ export default function DriveOffersPage() {
           px: 0,
           py: 4,
           minHeight: "100vh",
-          background: "linear-gradient(to right, #09203F, #537895)",
+          background:
+            "linear-gradient(to right, rgba(6, 22, 40, 0.7), rgba(59, 90, 112, 0.7))",
         }}
       >
         <Container maxWidth="lg">

@@ -56,7 +56,8 @@ export default function UserRankList() {
       <Box
         sx={{
           minHeight: "100vh",
-          background: "linear-gradient(to right, #09203F, #537895)",
+          background:
+            "linear-gradient(to right, rgba(6, 22, 40, 0.7), rgba(59, 90, 112, 0.7))",
           py: 6,
           px: 2,
         }}

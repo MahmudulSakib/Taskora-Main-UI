@@ -52,7 +52,8 @@ export default function UserFund() {
         alignItems="center"
         minHeight="80vh"
         sx={{
-          background: "linear-gradient(to right, #09203F, #537895)",
+          background:
+            "linear-gradient(to right, rgba(6, 22, 40, 0.7), rgba(59, 90, 112, 0.7))",
         }}
       >
         <CircularProgress sx={{ color: "#F5A742" }} />
@@ -69,7 +70,8 @@ export default function UserFund() {
         alignItems="center"
         minHeight="90vh"
         sx={{
-          background: "linear-gradient(to right, #09203F, #537895)",
+          background:
+            "linear-gradient(to right, rgba(6, 22, 40, 0.7), rgba(59, 90, 112, 0.7))",
           px: 2,
         }}
       >

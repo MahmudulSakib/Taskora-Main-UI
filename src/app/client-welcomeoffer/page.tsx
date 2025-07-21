@@ -68,7 +68,7 @@ export default function WelcomeOffer() {
       <div>
         <NavMenu />
       </div>
-      <div className="min-h-[90vh] flex items-center justify-center bg-gradient-to-r from-[#09203F] to-[#537895] text-white p-4">
+      <div className="min-h-[90vh] flex items-center justify-center bg-[linear-gradient(to_right,_rgba(6,22,40,0.7),_rgba(59,90,112,0.7))] text-white p-4">
         <div className="max-w-md text-center space-y-6 bg-black/30 backdrop-blur-md p-8 rounded-xl border border-white">
           <h1 className="text-3xl font-bold">🎁 Welcome Offer</h1>
           <p className="text-lg">Claim your one-time bonus of 100 TK!</p>

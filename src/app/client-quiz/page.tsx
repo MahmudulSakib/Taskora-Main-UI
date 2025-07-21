@@ -85,7 +85,8 @@ export default function ClientQuizPage() {
       <Box
         sx={{
           minHeight: "90vh",
-          background: "linear-gradient(135deg, #09203F, #537895)",
+          background:
+            "linear-gradient(to right, rgba(6, 22, 40, 0.7), rgba(59, 90, 112, 0.7))",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

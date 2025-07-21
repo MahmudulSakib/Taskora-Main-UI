@@ -154,7 +154,8 @@ export default function JobPostForm({
       <Box
         sx={{
           minHeight: "100vh",
-          background: "linear-gradient(to right, #09203F, #537895)",
+          background:
+            "bg-[linear-gradient(to_right,_rgba(6,22,40,0.7),_rgba(59,90,112,0.7))]",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",

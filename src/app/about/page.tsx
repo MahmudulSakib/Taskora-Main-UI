@@ -11,7 +11,8 @@ export default function AboutSection() {
       </div>
       <Box
         sx={{
-          background: "linear-gradient(to right, #09203F, #537895)",
+          background:
+            "linear-gradient(to right, rgba(6, 22, 40, 0.7), rgba(59, 90, 112, 0.7))",
           py: { xs: 8, md: 12 },
           color: "white",
           minHeight: "90vh",

@@ -67,7 +67,8 @@ export default function JobPostList() {
           minHeight: "100vh",
           py: 6,
           px: 2,
-          background: "linear-gradient(to right, #09203F, #537895)",
+          background:
+            "linear-gradient(to right, rgba(6, 22, 40, 0.7), rgba(59, 90, 112, 0.7))",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
