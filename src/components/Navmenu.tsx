@@ -102,7 +102,7 @@ export default function NavMenu() {
   const firstLetter = user?.fullName?.charAt(0).toUpperCase() || "";
 
   return (
-    <header className="bg-[linear-gradient(to_right,_rgba(6,22,40,0.7),_rgba(59,90,112,0.7))] text-white shadow-md sticky top-0 z-50">
+    <header className="bg-gradient-to-r from-[#09203F] to-[#537895] text-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
           <div className="flex items-center gap-4">
