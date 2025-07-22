@@ -62,7 +62,7 @@ export default function LoginPage() {
 
       router.push("/");
     } catch (err: any) {
-      setMessage("Login Failed!");
+      setMessage(err.response?.data?.error || "Login failed");
       setToastOpen(true);
     } finally {
       setLoading(false);
