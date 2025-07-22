@@ -96,7 +96,7 @@ export default function useClientAuth() {
   useEffect(() => {
     let timeout = setTimeout(() => {
       setLoading(false); // force stop spinner after 1.5s
-    }, 1500);
+    }, 500);
 
     checkAuth();
 
