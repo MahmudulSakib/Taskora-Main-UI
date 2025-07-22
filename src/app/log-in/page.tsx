@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 import axios from "axios";
+import useClientAuth from "@/hooks/useClientAuth";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -22,17 +23,35 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  const { setUser, setLoading: setGlobalLoading } = useClientAuth();
+
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError("");
 
+    // try {
+    //   await axios.post(
+    //     "https://taskora-main-backend.onrender.com/client/log-in",
+    //     { mobileNumber, password },
+    //     { withCredentials: true }
+    //   );
+    //   router.push("/");
+    // } catch (err: any) {
+    //   setError(err.response?.data?.error || "Login failed");
+    // } finally {
+    //   setLoading(false);
+    // }
+
     try {
-      await axios.post(
+      const res = await axios.post<any>(
         "https://taskora-main-backend.onrender.com/client/log-in",
         { mobileNumber, password },
         { withCredentials: true }
       );
+      setUser(res.data.user);
+      setGlobalLoading(false);
+
       router.push("/");
     } catch (err: any) {
       setError(err.response?.data?.error || "Login failed");
