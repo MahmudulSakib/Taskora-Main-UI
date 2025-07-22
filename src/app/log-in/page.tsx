@@ -10,6 +10,8 @@ import {
   CardContent,
   Box,
   CircularProgress,
+  Snackbar,
+  Alert,
 } from "@mui/material";
 import Link from "next/link";
 import axios from "axios";
@@ -22,6 +24,9 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  const [message, setMessage] = useState("");
+  const [toastOpen, setToastOpen] = useState(false);
 
   const { setUser, setLoading: setGlobalLoading } = useClientAuth();
 
@@ -52,9 +57,13 @@ export default function LoginPage() {
       setUser(res.data.user);
       setGlobalLoading(false);
 
+      setMessage("Successfully Login!");
+      setToastOpen(true);
+
       router.push("/");
     } catch (err: any) {
-      setError(err.response?.data?.error || "Login failed");
+      setMessage("Login Failed!");
+      setToastOpen(true);
     } finally {
       setLoading(false);
     }
@@ -114,12 +123,6 @@ export default function LoginPage() {
           >
             Log In
           </Typography>
-
-          {error && (
-            <Typography color="error" textAlign="center" mb={2} fontSize={14}>
-              {error}
-            </Typography>
-          )}
 
           <Box
             component="form"
@@ -214,6 +217,21 @@ export default function LoginPage() {
       >
         © 2025 Taskora
       </Box>
+
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        open={toastOpen}
+        autoHideDuration={3000}
+        onClose={() => setToastOpen(false)}
+      >
+        <Alert
+          onClose={() => setToastOpen(false)}
+          severity="success" // success | error | warning | info
+          sx={{ width: "100%" }}
+        >
+          {message}
+        </Alert>
+      </Snackbar>
     </Box>
   );
 }
