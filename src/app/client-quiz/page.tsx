@@ -43,7 +43,7 @@ export default function ClientQuizPage() {
         setQuiz(res.data.quiz);
         if (res.data.alreadySubmitted) {
           setAlreadySubmitted(true);
-          setAnswer(res.data.selectedAnswer); // mark selected
+          setAnswer(res.data.selectedAnswer);
         }
       })
       .catch((err) => {
@@ -73,6 +73,7 @@ export default function ClientQuizPage() {
     return (
       <Typography
         textAlign="center"
+        minHeight="100vh"
         mt={10}
         color="white"
         sx={{

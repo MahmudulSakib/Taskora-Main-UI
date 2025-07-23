@@ -111,7 +111,7 @@ export default function JobPostForm({
       router.push("/client-joblist");
     } catch (err: any) {
       console.error("Job post error:", err);
-      alert(err?.response?.data?.error || "Failed to submit job.");
+      setUploadMessage(err?.response?.data?.error || "Failed to submit job.");
     } finally {
       setSubmitting(false);
     }
