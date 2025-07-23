@@ -222,12 +222,12 @@ export default function useClientAuth() {
           setUser(res.data.user);
         } else if (active) {
           setUser(null);
-          router.replace("/login"); // ⏩ redirect immediately if not logged in
+          router.replace("/log-in"); // ⏩ redirect immediately if not logged in
         }
       } catch (err) {
         if (active) {
           setUser(null);
-          router.replace("/login"); // ⏩ fallback if error
+          router.replace("/log-in"); // ⏩ fallback if error
         }
       } finally {
         if (active) setLoading(false);
