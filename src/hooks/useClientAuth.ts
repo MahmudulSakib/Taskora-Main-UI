@@ -120,52 +120,124 @@
 //   return { user, loading, handleLogout };
 // }
 
+// "use client";
+
+// import { useEffect, useState } from "react";
+// import axios from "axios";
+// import { useRouter } from "next/navigation";
+
+// interface UserProfileResponse {
+//   user: {
+//     id: string;
+//     fullName: string;
+//     email: string;
+//     mobileNumber: string;
+//     profilePicture?: string;
+//   };
+// }
+
+// export default function useClientAuth() {
+//   const [user, setUser] = useState<any>(null);
+//   const [loading, setLoading] = useState(true);
+//   const router = useRouter();
+
+//   const checkAuth = async () => {
+//     try {
+//       const res = await axios.get<UserProfileResponse>(
+//         "https://taskora-main-backend.onrender.com/client/profile",
+//         {
+//           withCredentials: true,
+//         }
+//       );
+//       setUser(res.data.user);
+//     } catch (error) {
+//       setUser(null);
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   useEffect(() => {
+//     const timeout = setTimeout(() => {
+//       setLoading(false); // fallback timeout
+//     }, 1000);
+
+//     checkAuth();
+
+//     return () => clearTimeout(timeout);
+//   }, []);
+
+//   const handleLogout = async () => {
+//     try {
+//       await axios.post(
+//         "https://taskora-main-backend.onrender.com/client/log-out",
+//         {},
+//         { withCredentials: true }
+//       );
+//       setUser(null);
+//       router.push("/");
+//     } catch (error) {
+//       console.error("Logout failed:", error);
+//     }
+//   };
+
+//
+//   return { user, loading, handleLogout, setUser, setLoading };
+// }
+
 "use client";
 
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { useRouter } from "next/navigation";
+import axios from "axios";
 
-interface UserProfileResponse {
-  user: {
-    id: string;
-    fullName: string;
-    email: string;
-    mobileNumber: string;
-    profilePicture?: string;
-  };
+interface User {
+  id: string;
+  fullName: string;
+  email: string;
+  mobileNumber: string;
+  profilePicture?: string;
 }
 
 export default function useClientAuth() {
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
-  const checkAuth = async () => {
-    try {
-      const res = await axios.get<UserProfileResponse>(
-        "https://taskora-main-backend.onrender.com/client/profile",
-        {
-          withCredentials: true,
-        }
-      );
-      setUser(res.data.user);
-    } catch (error) {
-      setUser(null);
-    } finally {
-      setLoading(false);
-    }
-  };
-
+  // Fast check on mount
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setLoading(false); // fallback timeout
-    }, 1000);
+    let active = true;
 
-    checkAuth();
+    (async () => {
+      try {
+        const res = await axios.get<any>(
+          "https://taskora-main-backend.onrender.com/client/profile",
+          {
+            withCredentials: true,
+            timeout: 3000, // ⚡ set timeout to fail fast if the server is slow
+          }
+        );
 
-    return () => clearTimeout(timeout);
-  }, []);
+        if (active && res.data?.user) {
+          setUser(res.data.user);
+        } else if (active) {
+          setUser(null);
+          router.replace("/login"); // ⏩ redirect immediately if not logged in
+        }
+      } catch (err) {
+        if (active) {
+          setUser(null);
+          router.replace("/login"); // ⏩ fallback if error
+        }
+      } finally {
+        if (active) setLoading(false);
+      }
+    })();
+
+    return () => {
+      active = false;
+    };
+  }, [router]);
 
   const handleLogout = async () => {
     try {
@@ -181,6 +253,5 @@ export default function useClientAuth() {
     }
   };
 
-  // 👇 exposing setUser and setLoading so login can instantly update UI
   return { user, loading, handleLogout, setUser, setLoading };
 }
