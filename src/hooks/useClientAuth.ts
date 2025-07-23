@@ -221,10 +221,7 @@ export default function useClientAuth() {
           setUser(res.data.user);
         }
       } catch (err) {
-        if (active) {
-          setUser(null);
-          router.replace("/log-in");
-        }
+        console.log(err);
       } finally {
         if (active) setLoading(false);
       }
