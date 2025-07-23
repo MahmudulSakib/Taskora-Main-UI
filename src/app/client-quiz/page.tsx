@@ -40,7 +40,6 @@ export default function ClientQuizPage() {
         withCredentials: true,
       })
       .then((res) => {
-        // Backend sends: { quiz, alreadySubmitted, selectedAnswer }
         setQuiz(res.data.quiz);
         if (res.data.alreadySubmitted) {
           setAlreadySubmitted(true);
@@ -64,7 +63,7 @@ export default function ClientQuizPage() {
       );
       setUploadMessages("Answer successfully submitted!");
       setToastOpen(true);
-      setAlreadySubmitted(true); // permanently disable after submission
+      setAlreadySubmitted(true);
     } catch (err: any) {
       alert(err.response?.data?.error || "Failed to submit");
     }

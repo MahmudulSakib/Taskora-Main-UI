@@ -17,7 +17,7 @@ const handleAdClick = async (url: string) => {
   } catch (err) {
     console.error("Failed to add ad bonus", err);
   } finally {
-    window.open(url, "_blank"); // open ad after recording click
+    window.open(url, "_blank");
   }
 };
 

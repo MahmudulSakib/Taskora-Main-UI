@@ -43,7 +43,6 @@ export default function JobPostForm({
     }
   }, [loading, user, router]);
 
-  // ✅ Fetch wallet after auth success
   useEffect(() => {
     const fetchWallet = async () => {
       try {
@@ -131,7 +130,6 @@ export default function JobPostForm({
     textarea: { color: "#fff" },
   };
 
-  // ✅ Block UI while checking auth or waiting to redirect
   if (loading || !user) {
     return (
       <Box

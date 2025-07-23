@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@mui/material";
 import axios from "axios";
-import Lottie from "lottie-react"; // You can use any lottie file
+import Lottie from "lottie-react";
 import useClientAuth from "@/hooks/useClientAuth";
 import { useRouter } from "next/navigation";
 

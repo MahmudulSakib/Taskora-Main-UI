@@ -23,7 +23,6 @@ import axios from "axios";
 import { TransitionProps } from "@mui/material/transitions";
 import { ReactElement, forwardRef } from "react";
 
-// ✅ Slide transition
 const Transition = forwardRef(function Transition(
   props: TransitionProps & { children: ReactElement<any, any> },
   ref
@@ -129,21 +128,21 @@ export default function NotificationDialog() {
                 background: "rgba(255,255,255,0.02)",
                 p: 1,
                 borderRadius: 2,
-                // 👇 Scrollbar blur simulation
+
                 "&::-webkit-scrollbar": {
                   width: "8px",
                 },
                 "&::-webkit-scrollbar-track": {
                   background: "rgba(255, 255, 255, 0.05)",
-                  backdropFilter: "blur(6px)", // ✅ Adds blur under track
+                  backdropFilter: "blur(6px)",
                   borderRadius: 10,
                 },
                 "&::-webkit-scrollbar-thumb": {
                   background: "rgba(255, 255, 255, 0.2)",
                   borderRadius: 10,
-                  backdropFilter: "blur(10px)", // ✅ Simulates blur on thumb
+                  backdropFilter: "blur(10px)",
                 },
-                scrollbarColor: "rgba(255,255,255,0.3) transparent", // For Firefox
+                scrollbarColor: "rgba(255,255,255,0.3) transparent",
               }}
             >
               <List dense disablePadding>

@@ -75,7 +75,6 @@ export default function DriveOffersPage() {
     }
   }, [authload, user, page]);
 
-  // ✅ Fully block render until auth loading is done
   if (authload || (!user && !authload)) {
     return (
       <Box

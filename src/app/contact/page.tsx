@@ -34,7 +34,6 @@ export default function ContactSection() {
             flexDirection={{ xs: "column", md: "row" }}
             gap={4}
           >
-            {/* Contact Info */}
             <Box
               sx={{
                 flex: 1,

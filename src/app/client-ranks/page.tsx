@@ -19,7 +19,6 @@ import NavMenu from "@/components/Navmenu";
 import useClientAuth from "@/hooks/useClientAuth";
 import { useRouter } from "next/navigation";
 
-// Mask email without domain
 function maskEmail(email: string) {
   const [name, domain] = email.split("@");
   if (!name || !domain || name.length < 1) return "****@" + domain;

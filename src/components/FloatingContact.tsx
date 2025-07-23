@@ -17,19 +17,19 @@ export default function FloatingContact() {
       icon: <WhatsAppIcon />,
       label: "WhatsApp",
       url: "https://wa.me/your-number",
-      color: "#25D366", // WhatsApp green
+      color: "#25D366",
     },
     {
       icon: <TelegramIcon />,
       label: "Telegram",
       url: "https://t.me/yourusername",
-      color: "#3390EC", // your app theme (custom blue)
+      color: "#3390EC",
     },
     {
       icon: <FacebookIcon />,
       label: "Facebook",
       url: "https://facebook.com/yourpage",
-      color: "#1877F2", // Facebook blue
+      color: "#1877F2",
     },
   ];
 
@@ -71,10 +71,10 @@ export default function FloatingContact() {
         color="default"
         onClick={toggleIcons}
         sx={{
-          backgroundColor: "#09203F", // your app base color
+          backgroundColor: "#09203F",
           color: "#fff",
           "&:hover": {
-            backgroundColor: "#537895", // your app hover color
+            backgroundColor: "#537895",
           },
         }}
       >

@@ -250,7 +250,6 @@ export default function JobDetailsPage() {
               Selected: {files.length} / 15
             </Typography>
 
-            {/* Previews */}
             <Box mt={2} sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
               {files.map((file, idx) => {
                 const url = URL.createObjectURL(file);
@@ -281,7 +280,6 @@ export default function JobDetailsPage() {
               })}
             </Box>
 
-            {/* Buttons */}
             <a href={job.link} target="_blank" rel="noopener noreferrer">
               <Button
                 variant="contained"
@@ -344,7 +342,6 @@ export default function JobDetailsPage() {
         </Snackbar>
       </Box>
 
-      {/* Fullscreen Image Preview */}
       {previewImage && (
         <Box
           onClick={() => setPreviewImage(null)}

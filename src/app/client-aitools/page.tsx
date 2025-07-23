@@ -236,7 +236,6 @@ export default function UserAiSubscriptionPlans() {
             </Box>
           )}
 
-          {/* Dialog */}
           <Dialog
             open={open}
             onClose={() => setOpen(false)}

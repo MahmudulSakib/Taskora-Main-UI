@@ -202,7 +202,6 @@ export default function JobPostList() {
                 })}
               </Box>
 
-              {/* Pagination Buttons */}
               {totalPages > 1 && (
                 <Box
                   mt={4}

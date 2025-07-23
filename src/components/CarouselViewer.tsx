@@ -1,4 +1,3 @@
-// app/client/components/CarouselSection.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -8,7 +7,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "./swiper-custom.css"; // ✅ Import custom Swiper styles
+import "./swiper-custom.css";
 
 export default function CarouselSection() {
   const [images, setImages] = useState<string[]>([]);
@@ -27,7 +26,7 @@ export default function CarouselSection() {
     <section
       className="w-full bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url('/your-background.jpg')`, // Replace with actual image
+        backgroundImage: `url('/your-background.jpg')`,
       }}
     >
       <div className="max-w-[1200px] mx-auto px-4 py-10">
