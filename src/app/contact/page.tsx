@@ -49,7 +49,7 @@ export default function ContactSection() {
               </Typography>
 
               <Typography variant="body1" mb={2} sx={{ lineHeight: 1.8 }}>
-                Taskora HQ
+                Good Life HQ
                 <br />
                 5th Avenue, Manhattan
                 <br />
@@ -59,7 +59,7 @@ export default function ContactSection() {
               <Divider sx={{ borderColor: "rgba(255,255,255,0.2)", my: 2 }} />
 
               <Typography variant="body2" sx={{ lineHeight: 1.8 }}>
-                <strong>Email:</strong> support@taskora.com <br />
+                <strong>Email:</strong> support@Good Life.com <br />
                 <strong>Phone:</strong> +1 (212) 555-1234 <br />
                 <strong>Hours:</strong> Mon–Fri, 9AM–6PM EST
               </Typography>

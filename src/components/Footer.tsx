@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="bg-gradient-to-r from-[#09203F] to-[#537895] text-white py-10">
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="text-center md:text-left">
-          <h3 className="primary-logo mb-2">Taskora</h3>
+          <h3 className="primary-logo mb-2">Good Life</h3>
           <p className="text-sm opacity-80 max-w-xs">
             Empowering businesses with seamless solutions and dedicated support.
           </p>
@@ -26,7 +26,7 @@ export default function Footer() {
         </div>
 
         <div className="text-xs opacity-70">
-          &copy; {new Date().getFullYear()} Taskora. All rights reserved.
+          &copy; {new Date().getFullYear()} Good Life. All rights reserved.
         </div>
       </div>
     </footer>

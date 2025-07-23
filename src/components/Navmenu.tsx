@@ -112,7 +112,7 @@ export default function NavMenu() {
             >
               <MenuIcon />
             </button>
-            <div className="primary-logo">Taskora</div>
+            <div className="primary-logo">Good Life</div>
           </div>
 
           <nav className="hidden md:flex mx-auto space-x-8 text-lg">
@@ -190,7 +190,7 @@ export default function NavMenu() {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex items-center justify-between pt-2">
-            <p className="hamburgermenu-logo">Taskora</p>
+            <p className="hamburgermenu-logo">Good Life</p>
             <button
               onClick={closeMobileMenu}
               className="text-white cursor-pointer"

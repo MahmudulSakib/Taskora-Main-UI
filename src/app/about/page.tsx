@@ -42,7 +42,7 @@ export default function AboutSection() {
             <Divider sx={{ borderColor: "rgba(255,255,255,0.2)", mb: 3 }} />
 
             <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
-              Welcome to <strong>Taskora</strong> — your all-in-one digital
+              Welcome to <strong>Good Life</strong> — your all-in-one digital
               platform for earning, managing, and spending smarter. We bring
               together job automation, mobile recharges, AI subscriptions, and
               micro-earning in one secure and easy-to-use space.

@@ -4,7 +4,7 @@ import MuiProvider from "@/lib/MuiProvider";
 import FloatingContact from "@/components/FloatingContact";
 
 export const metadata: Metadata = {
-  title: "Taskora",
+  title: "Good Life",
   description: "Microjob platform",
 };
 

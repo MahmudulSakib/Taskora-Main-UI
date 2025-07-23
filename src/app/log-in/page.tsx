@@ -215,7 +215,7 @@ export default function LoginPage() {
         width="100%"
         sx={{ color: "#fff", fontSize: 12 }}
       >
-        © 2025 Taskora
+        © 2025 Good Life
       </Box>
 
       <Snackbar
