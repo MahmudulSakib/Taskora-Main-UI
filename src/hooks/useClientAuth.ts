@@ -219,9 +219,6 @@ export default function useClientAuth() {
 
         if (active && res.data?.user) {
           setUser(res.data.user);
-        } else if (active) {
-          setUser(null);
-          router.replace("/log-in");
         }
       } catch (err) {
         if (active) {
