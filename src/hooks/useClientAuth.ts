@@ -204,7 +204,6 @@ export default function useClientAuth() {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
-  // Fast check on mount
   useEffect(() => {
     let active = true;
 
@@ -214,7 +213,7 @@ export default function useClientAuth() {
           "https://taskora-main-backend.onrender.com/client/profile",
           {
             withCredentials: true,
-            timeout: 3000, // ⚡ set timeout to fail fast if the server is slow
+            timeout: 3000,
           }
         );
 
@@ -222,12 +221,12 @@ export default function useClientAuth() {
           setUser(res.data.user);
         } else if (active) {
           setUser(null);
-          router.replace("/log-in"); // ⏩ redirect immediately if not logged in
+          router.replace("/log-in");
         }
       } catch (err) {
         if (active) {
           setUser(null);
-          router.replace("/log-in"); // ⏩ fallback if error
+          router.replace("/log-in");
         }
       } finally {
         if (active) setLoading(false);
